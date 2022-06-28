@@ -9,8 +9,8 @@ public class Task {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long task_id;
-    @Column(name="TASK_CONTENT")
-    private String content;
+
+    private String task_content;
 
 //    @Column(name="TASK_CONTENT")
 //    private Boolean isDone;
@@ -18,14 +18,14 @@ public class Task {
 //    @OneToMany(mappedBy = "TAG")
 //    private List<Tag> tags;
 
-
-    public String getContent() {
-        return content;
+    public String getTask_content() {
+        return task_content;
     }
 
-    public void setContent(String content) {
-        this.content = content;
+    public void setTask_content(String task_content) {
+        this.task_content = task_content;
     }
+
 
 //    public Boolean getDone() {
 //        return isDone;
@@ -43,12 +43,11 @@ public class Task {
 //        this.tags = tags;
 //    }
 
-    public void setId(Long id) {
-        this.task_id = id;
+    public Long getTask_id() {
+        return task_id;
     }
 
-    @Id
-    public Long getId() {
-        return task_id;
+    public void setTask_id(Long task_id) {
+        this.task_id = task_id;
     }
 }
