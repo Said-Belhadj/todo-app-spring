@@ -14,6 +14,7 @@ public class TaskController {
     @Autowired
     TaskService taskService;
 
+    @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping("/get/all/tasks")
     public List<Task> getAllTasks(){
         return taskService.getAllTasks();
